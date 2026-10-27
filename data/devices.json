@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "device_code": "ESP001",
+    "device_name": "Tủ đo khu ao mới",
+    "pond_code": "AOAHUNG01",
+    "pond_name": "Ao Tôm của anh Hùng",
+    "location": "Khu ao 9",
+    "latitude": 10.123456,
+    "longitude": 106.234566,
+    "description": "Thiết bị đã thay đổi"
+  },
+  {
+    "id": "2",
+    "device_code": "ESP002",
+    "device_name": "Tủ đo Khu 2",
+    "pond_code": "AOAHUNG01",
+    "pond_name": "Ao Tôm của anh Hùng",
+    "location": "Khu 2, Trại Tôm A",
+    "latitude": 10.523456,
+    "longitude": 106.534567,
+    "description": "Tủ lắp tại ao số 2, kiểm soát pH, DO, độ mặn."
+  },
+  {
+    "id": "3",
+    "device_code": "ESP003",
+    "device_name": "Tủ đo Khu 3",
+    "pond_code": "POND0003",
+    "pond_name": "Ao thử nghiệm",
+    "location": "Khu 3, Trại Tôm B",
+    "latitude": 10.823456,
+    "longitude": 107.934567,
+    "description": "Tủ quan trắc mới lắp năm 2025."
+  },
+  {
+    "id": "7",
+    "device_code": "ESP999",
+    "device_name": "Tủ đo khu ao 9",
+    "pond_code": null,
+    "pond_name": "Chưa gán",
+    "location": "Khu ao 9",
+    "latitude": 17.823456,
+    "longitude": 106.534567,
+    "description": "Thiết bị test OK nhé"
+  },
+  {
+    "id": "8",
+    "device_code": "CtrlX",
+    "device_name": "Tủ demo quan trac",
+    "pond_code": "AOAHUNG01",
+    "pond_name": "Ao Tôm của anh Hùng",
+    "location": "Khu ao demo",
+    "latitude": 10.123456,
+    "longitude": 106.234567,
+    "description": "Thiết bị đã thay đổi"
+  },
+  {
+    "id": "9",
+    "device_code": "IOT001",
+    "device_name": "Tủ đo khu A1",
+    "pond_code": "ao001",
+    "pond_name": "Ao khu vực 1",
+    "location": "Khu A1",
+    "latitude": 13.623456,
+    "longitude": 107.534567,
+    "description": "Thiết bị test"
+  },
+  {
+    "id": "44",
+    "device_code": "ABC123",
+    "device_name": "Thiết bị mới",
+    "pond_code": "ao001",
+    "pond_name": "Ao khu vực 1",
+    "location": "Vĩnh Long",
+    "latitude": 10.223456,
+    "longitude": 106.134567,
+    "description": ""
+  },
+  {
+    "id": "45",
+    "device_code": "ESP1000",
+    "device_name": "Temp of pond",
+    "pond_code": null,
+    "pond_name": "Chưa gán",
+    "location": "Pond 11",
+    "latitude": 10.123456,
+    "longitude": 106.234566,
+    "description": "Location is changed"
+  },
+  {
+    "id": "46",
+    "device_code": "ESP1111",
+    "device_name": "Tủ đo khu ao 9",
+    "pond_code": null,
+    "pond_name": "Chưa gán",
+    "location": "Khu ao 9",
+    "latitude": 10.123456,
+    "longitude": 106.234567,
+    "description": "Thiết bị test"
+  },
+  {
+    "id": "47",
+    "device_code": "ESP555",
+    "device_name": "Tủ đo khu ao 100",
+    "pond_code": null,
+    "pond_name": "Chưa gán",
+    "location": "Khu ao 100",
+    "latitude": 10.999999,
+    "longitude": 106.888888,
+    "description": "Thiết bị đã thay đổi"
+  }
+]

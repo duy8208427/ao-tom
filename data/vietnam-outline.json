@@ -1,0 +1,81 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Viet Nam" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [105.0, 23.35],
+            [105.85, 23.0],
+            [106.7, 22.8],
+            [107.3, 21.6],
+            [108.0, 21.5],
+            [107.85, 20.7],
+            [106.7, 20.3],
+            [106.5, 19.2],
+            [105.9, 18.5],
+            [106.5, 17.6],
+            [107.3, 16.7],
+            [108.2, 16.1],
+            [109.0, 15.4],
+            [109.3, 14.2],
+            [109.4, 13.0],
+            [109.2, 11.9],
+            [108.8, 11.0],
+            [108.2, 10.5],
+            [107.2, 10.4],
+            [106.6, 10.0],
+            [106.6, 9.4],
+            [106.0, 8.7],
+            [105.2, 8.6],
+            [104.75, 9.3],
+            [104.7, 10.2],
+            [105.0, 10.9],
+            [105.5, 11.5],
+            [106.0, 12.2],
+            [106.2, 13.2],
+            [106.5, 14.4],
+            [106.4, 15.5],
+            [105.8, 16.6],
+            [105.2, 17.5],
+            [104.8, 18.3],
+            [104.9, 19.2],
+            [105.2, 20.4],
+            [105.0, 21.5],
+            [104.5, 22.4],
+            [104.8, 22.9],
+            [105.0, 23.35]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Viet Nam", "kind": "label" },
+      "geometry": { "type": "Point", "coordinates": [108.0, 14.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Laos", "kind": "label" },
+      "geometry": { "type": "Point", "coordinates": [103.8, 18.2] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Cambodia", "kind": "label" },
+      "geometry": { "type": "Point", "coordinates": [104.6, 12.4] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "China", "kind": "label" },
+      "geometry": { "type": "Point", "coordinates": [106.5, 24.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bien Dong", "kind": "label" },
+      "geometry": { "type": "Point", "coordinates": [111.2, 14.5] }
+    }
+  ]
+}

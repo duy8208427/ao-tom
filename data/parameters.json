@@ -1,0 +1,146 @@
+[
+  {
+    "param_code": "ALK",
+    "param_name": "Kiềm (Alkalinity)",
+    "unit": "mg/L CaCO₃",
+    "ref_min": 80,
+    "ref_max": 150,
+    "description": "Ổn định pH, giảm stress cho tôm. Kiềm thấp làm pH dao động mạnh."
+  },
+  {
+    "param_code": "CHLA",
+    "param_name": "Mật độ tảo (Chlorophyll-a)",
+    "unit": "µg/L",
+    "ref_min": 5,
+    "ref_max": 50,
+    "description": "Tảo giúp ổn định oxy, hấp thụ chất thải. Quá nhiều làm tôm thiếu oxy ban đêm."
+  },
+  {
+    "param_code": "CL2",
+    "param_name": "Chlorine dư (Cl₂)",
+    "unit": "mg/L",
+    "ref_min": 0,
+    "ref_max": 0,
+    "description": "Độc với tôm. Chỉ dùng khi xử lý nước."
+  },
+  {
+    "param_code": "COD",
+    "param_name": "Nhu cầu oxy hóa học (COD)",
+    "unit": "mg/L",
+    "ref_min": null,
+    "ref_max": 30,
+    "description": "Phản ánh lượng chất hữu cơ trong nước. Cao quá dễ suy giảm oxy."
+  },
+  {
+    "param_code": "DO",
+    "param_name": "Oxy hòa tan (DO)",
+    "unit": "mg/L",
+    "ref_min": 4,
+    "ref_max": null,
+    "description": "Thiếu oxy khiến tôm lờ đờ, nổi đầu, giảm ăn."
+  },
+  {
+    "param_code": "H2S",
+    "param_name": "Hydrogen Sulfide (H₂S)",
+    "unit": "mg/L",
+    "ref_min": 0,
+    "ref_max": 0.002,
+    "description": "Cực độc, chỉ cần hàm lượng nhỏ tôm có thể chết."
+  },
+  {
+    "param_code": "HARD",
+    "param_name": "Độ cứng (Hardness)",
+    "unit": "mg/L CaCO₃",
+    "ref_min": 80,
+    "ref_max": 200,
+    "description": "Ảnh hưởng lột xác tôm. Độ cứng thấp dễ làm tôm mềm vỏ."
+  },
+  {
+    "param_code": "NH3",
+    "param_name": "Amonia không ion hóa (NH₃)",
+    "unit": "mg/L",
+    "ref_min": 0,
+    "ref_max": 0.1,
+    "description": "Độc với tôm, làm tôm giảm ăn, chậm lớn."
+  },
+  {
+    "param_code": "NH4",
+    "param_name": "Amonium ion hóa (NH₄⁺)",
+    "unit": "mg/L",
+    "ref_min": 0,
+    "ref_max": 1.5,
+    "description": "Liên quan chuyển hóa chất thải, ít độc hơn NH₃."
+  },
+  {
+    "param_code": "NO2",
+    "param_name": "Nitrite (NO₂⁻)",
+    "unit": "mg/L",
+    "ref_min": 0,
+    "ref_max": 0.5,
+    "description": "Độc với tôm, gây methemoglobin, giảm khả năng vận chuyển oxy."
+  },
+  {
+    "param_code": "NO3",
+    "param_name": "Nitrate (NO₃⁻)",
+    "unit": "mg/L",
+    "ref_min": 0,
+    "ref_max": 50,
+    "description": "Ít độc hơn NO₂⁻ nhưng nồng độ cao vẫn ảnh hưởng tôm."
+  },
+  {
+    "param_code": "ORP",
+    "param_name": "ORP (Oxidation-Reduction Potential)",
+    "unit": "mV",
+    "ref_min": 150,
+    "ref_max": 300,
+    "description": "Phản ánh khả năng tự làm sạch, oxy hóa trong nước."
+  },
+  {
+    "param_code": "PH",
+    "param_name": "pH",
+    "unit": "-",
+    "ref_min": 7.5,
+    "ref_max": 8.5,
+    "description": "pH dao động mạnh khiến tôm stress, yếu sức đề kháng."
+  },
+  {
+    "param_code": "SAL",
+    "param_name": "Độ mặn (Salinity)",
+    "unit": "ppt",
+    "ref_min": 5,
+    "ref_max": 35,
+    "description": "Ảnh hưởng áp suất thẩm thấu, tôm dễ stress nếu biến động nhanh."
+  },
+  {
+    "param_code": "TEMP",
+    "param_name": "Nhiệt độ nước",
+    "unit": "°C",
+    "ref_min": 28,
+    "ref_max": 32,
+    "description": "Ảnh hưởng trao đổi chất, miễn dịch của tôm. Nhiệt độ cao dễ thiếu oxy."
+  },
+  {
+    "param_code": "TSS",
+    "param_name": "Chất rắn lơ lửng (TSS)",
+    "unit": "mg/L",
+    "ref_min": null,
+    "ref_max": 50,
+    "description": "TSS cao làm đục nước, cản quang, ảnh hưởng hô hấp tôm."
+  },
+  {
+    "param_code": "TURB",
+    "param_name": "Độ đục (Turbidity)",
+    "unit": "NTU",
+    "ref_min": null,
+    "ref_max": 30,
+    "description": "Quá đục làm tôm stress, giảm ăn."
+  },
+  {
+    "param_code": "VIB",
+    "param_name": "Vi khuẩn Vibrio spp.",
+    "unit": "CFU/mL",
+    "ref_min": 0,
+    "ref_max": null,
+    "description": "Gây bệnh đường ruột, gan tụy cho tôm."
+  }
+]

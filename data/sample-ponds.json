@@ -1,0 +1,1349 @@
+{
+  "ponds": [
+    {
+      "id": "s1",
+      "pond_code": "ST01",
+      "pond_name": "Ao Sóc Trăng 1",
+      "area": "3200.00",
+      "volume": "4800.00",
+      "location": "Sóc Trăng",
+      "description": "Ao thâm canh, nước trong và ổn định.",
+      "created_at": "2026-03-12 08:20:00"
+    },
+    {
+      "id": "s2",
+      "pond_code": "BT03",
+      "pond_name": "Ao Bến Tre 3",
+      "area": "2100.00",
+      "volume": "3150.00",
+      "location": "Bến Tre",
+      "description": "Ao ven sông, nitrite đang cao.",
+      "created_at": "2026-04-02 09:10:00"
+    },
+    {
+      "id": "s3",
+      "pond_code": "PT01",
+      "pond_name": "Ao Phú Tân",
+      "area": "1800.00",
+      "volume": "2700.00",
+      "location": "Cà Mau",
+      "description": "Ao vùng Phú Tân, oxy hòa tan thấp.",
+      "created_at": "2026-05-18 14:40:00"
+    },
+    {
+      "id": "s4",
+      "pond_code": "TVHTX",
+      "pond_name": "Ao Trà Vinh HTX",
+      "area": "4500.00",
+      "volume": "6750.00",
+      "location": "Trà Vinh",
+      "description": "Ao hợp tác xã, chỉ số trong ngưỡng.",
+      "created_at": "2026-06-01 07:05:00"
+    },
+    {
+      "id": "s5",
+      "pond_code": "DS01",
+      "pond_name": "Ao Đồ Sơn",
+      "area": "2400.00",
+      "volume": "3600.00",
+      "location": "Hải Phòng",
+      "description": "Ao ven biển Đồ Sơn.",
+      "created_at": "2026-07-08 08:00:00"
+    },
+    {
+      "id": "s6",
+      "pond_code": "NL01",
+      "pond_name": "Ao Nghi Lộc",
+      "area": "2800.00",
+      "volume": "4200.00",
+      "location": "Nghệ An",
+      "description": "Ao vùng Nghi Lộc, nhiệt độ cao.",
+      "created_at": "2026-07-15 09:30:00"
+    },
+    {
+      "id": "s7",
+      "pond_code": "TP01",
+      "pond_name": "Ao Tuy Phước",
+      "area": "1900.00",
+      "volume": "2850.00",
+      "location": "Bình Định",
+      "description": "Ao Tuy Phước, độ mặn ổn.",
+      "created_at": "2026-08-01 10:15:00"
+    },
+    {
+      "id": "s8",
+      "pond_code": "NH01",
+      "pond_name": "Ao Ninh Hòa",
+      "area": "3500.00",
+      "volume": "5250.00",
+      "location": "Khánh Hòa",
+      "description": "Ao Ninh Hòa, oxy tốt.",
+      "created_at": "2026-08-12 07:45:00"
+    },
+    {
+      "id": "s9",
+      "pond_code": "PTH01",
+      "pond_name": "Ao Phan Thiết",
+      "area": "2200.00",
+      "volume": "3300.00",
+      "location": "Bình Thuận",
+      "description": "Ao Phan Thiết, pH thấp.",
+      "created_at": "2026-09-02 11:20:00"
+    }
+  ],
+  "devices": [
+    {
+      "id": "s-d1",
+      "device_code": "ST01-IOT",
+      "device_name": "Tủ đo Sóc Trăng 1",
+      "pond_code": "ST01",
+      "pond_name": "Ao Sóc Trăng 1",
+      "location": "Vĩnh Châu, Sóc Trăng",
+      "latitude": 9.6032,
+      "longitude": 105.9738,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d2",
+      "device_code": "BT03-IOT",
+      "device_name": "Tủ đo Bến Tre 3",
+      "pond_code": "BT03",
+      "pond_name": "Ao Bến Tre 3",
+      "location": "Ba Tri, Bến Tre",
+      "latitude": 10.2428,
+      "longitude": 106.3756,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d3",
+      "device_code": "PT01-IOT",
+      "device_name": "Tủ đo Phú Tân",
+      "pond_code": "PT01",
+      "pond_name": "Ao Phú Tân",
+      "location": "Phú Tân, Cà Mau",
+      "latitude": 9.0014,
+      "longitude": 105.0812,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d4",
+      "device_code": "TVHTX-IOT",
+      "device_name": "Tủ đo Trà Vinh HTX",
+      "pond_code": "TVHTX",
+      "pond_name": "Ao Trà Vinh HTX",
+      "location": "Cầu Ngang, Trà Vinh",
+      "latitude": 9.9326,
+      "longitude": 106.3441,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d5",
+      "device_code": "DS01-IOT",
+      "device_name": "Tủ đo Đồ Sơn",
+      "pond_code": "DS01",
+      "pond_name": "Ao Đồ Sơn",
+      "location": "Đồ Sơn, Hải Phòng",
+      "latitude": 20.721,
+      "longitude": 106.791,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d6",
+      "device_code": "NL01-IOT",
+      "device_name": "Tủ đo Nghi Lộc",
+      "pond_code": "NL01",
+      "pond_name": "Ao Nghi Lộc",
+      "location": "Nghi Lộc, Nghệ An",
+      "latitude": 18.811,
+      "longitude": 105.622,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d7",
+      "device_code": "TP01-IOT",
+      "device_name": "Tủ đo Tuy Phước",
+      "pond_code": "TP01",
+      "pond_name": "Ao Tuy Phước",
+      "location": "Tuy Phước, Bình Định",
+      "latitude": 13.851,
+      "longitude": 109.181,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d8",
+      "device_code": "NH01-IOT",
+      "device_name": "Tủ đo Ninh Hòa",
+      "pond_code": "NH01",
+      "pond_name": "Ao Ninh Hòa",
+      "location": "Ninh Hòa, Khánh Hòa",
+      "latitude": 12.501,
+      "longitude": 109.161,
+      "description": "Tủ đo tại ao"
+    },
+    {
+      "id": "s-d9",
+      "device_code": "PTH01-IOT",
+      "device_name": "Tủ đo Phan Thiết",
+      "pond_code": "PTH01",
+      "pond_name": "Ao Phan Thiết",
+      "location": "Phan Thiết, Bình Thuận",
+      "latitude": 10.931,
+      "longitude": 108.101,
+      "description": "Tủ đo tại ao"
+    }
+  ],
+  "realtime": {
+    "ST01-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 118,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 28,
+        "unit": "µg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 18,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 6.4,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 142,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.04,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.22,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.12,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 18,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 210,
+        "unit": "mV",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 7.9,
+        "unit": "-",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 16,
+        "unit": "ppt",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 29.4,
+        "unit": "°C",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 22,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 8,
+        "unit": "NTU",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 6,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-19 07:40:12",
+        "status": "OK"
+      }
+    ],
+    "BT03-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 96,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 41,
+        "unit": "µg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 24,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 5.1,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0.001,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 168,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.08,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.9,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 1.8,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "HIGH"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 62,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "HIGH"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 188,
+        "unit": "mV",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 7.6,
+        "unit": "-",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 12,
+        "unit": "ppt",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 30.8,
+        "unit": "°C",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 36,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 14,
+        "unit": "NTU",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 18,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-19 07:42:08",
+        "status": "OK"
+      }
+    ],
+    "PT01-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 88,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 12,
+        "unit": "µg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 21,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 2.4,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "LOW"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0.001,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 110,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.06,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.7,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.28,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 22,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 162,
+        "unit": "mV",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 7.7,
+        "unit": "-",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 22,
+        "unit": "ppt",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 31.1,
+        "unit": "°C",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 19,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 9,
+        "unit": "NTU",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 11,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-19 07:45:31",
+        "status": "OK"
+      }
+    ],
+    "TVHTX-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 132,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 33,
+        "unit": "µg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 14,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 7.1,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 156,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.03,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.18,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.08,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 12,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 245,
+        "unit": "mV",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 8.1,
+        "unit": "-",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 18,
+        "unit": "ppt",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 28.9,
+        "unit": "°C",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 16,
+        "unit": "mg/L",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 6,
+        "unit": "NTU",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 4,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-19 07:48:55",
+        "status": "OK"
+      }
+    ],
+    "DS01-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 120,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 30,
+        "unit": "µg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 16,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 5.8,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 140,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.04,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.2,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.1,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 15,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 210,
+        "unit": "mV",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 7.8,
+        "unit": "-",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 12,
+        "unit": "ppt",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 27.2,
+        "unit": "°C",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "LOW"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 20,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 8,
+        "unit": "NTU",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 5,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      }
+    ],
+    "NL01-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 120,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 30,
+        "unit": "µg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 16,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 4.9,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 140,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.04,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.2,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.1,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 15,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 210,
+        "unit": "mV",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 7.6,
+        "unit": "-",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 18,
+        "unit": "ppt",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 33.4,
+        "unit": "°C",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "HIGH"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 20,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 8,
+        "unit": "NTU",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 5,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      }
+    ],
+    "TP01-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 120,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 30,
+        "unit": "µg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 16,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 6.8,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 140,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.04,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.2,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.1,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 15,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 210,
+        "unit": "mV",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 7.8,
+        "unit": "-",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 24,
+        "unit": "ppt",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 29.5,
+        "unit": "°C",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 20,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 8,
+        "unit": "NTU",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 5,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      }
+    ],
+    "NH01-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 120,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 30,
+        "unit": "µg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 16,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 7.4,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 140,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.04,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.2,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.1,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 15,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 210,
+        "unit": "mV",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 8.0,
+        "unit": "-",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 28,
+        "unit": "ppt",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 29.5,
+        "unit": "°C",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 20,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 8,
+        "unit": "NTU",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 5,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      }
+    ],
+    "PTH01-IOT": [
+      {
+        "param_code": "ALK",
+        "measured_value": 120,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CHLA",
+        "measured_value": 30,
+        "unit": "µg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "CL2",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "COD",
+        "measured_value": 16,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "DO",
+        "measured_value": 5.2,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "H2S",
+        "measured_value": 0,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "HARD",
+        "measured_value": 140,
+        "unit": "mg/L CaCO₃",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH3",
+        "measured_value": 0.04,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NH4",
+        "measured_value": 0.2,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO2",
+        "measured_value": 0.1,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "NO3",
+        "measured_value": 15,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "ORP",
+        "measured_value": 210,
+        "unit": "mV",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "PH",
+        "measured_value": 6.8,
+        "unit": "-",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "LOW"
+      },
+      {
+        "param_code": "SAL",
+        "measured_value": 22,
+        "unit": "ppt",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TEMP",
+        "measured_value": 29.5,
+        "unit": "°C",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TSS",
+        "measured_value": 20,
+        "unit": "mg/L",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "TURB",
+        "measured_value": 8,
+        "unit": "NTU",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      },
+      {
+        "param_code": "VIB",
+        "measured_value": 5,
+        "unit": "CFU/mL",
+        "measured_at": "2026-10-20 08:10:00",
+        "status": "OK"
+      }
+    ]
+  }
+}

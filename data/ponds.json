@@ -1,0 +1,52 @@
+[
+  {
+    "id": "5",
+    "pond_code": "AOAHUNG01",
+    "pond_name": "Ao Tôm của anh Hùng",
+    "area": "100.00",
+    "volume": "200.00",
+    "location": "Cà Mau",
+    "description": "",
+    "created_at": "2025-07-06 13:01:26"
+  },
+  {
+    "id": "4",
+    "pond_code": "p0009",
+    "pond_name": "Ao hợp tác",
+    "area": "700.00",
+    "volume": "1000.00",
+    "location": "Vĩnh Long",
+    "description": "",
+    "created_at": "2025-07-06 11:27:03"
+  },
+  {
+    "id": "3",
+    "pond_code": "POND0003",
+    "pond_name": "Ao thử nghiệm",
+    "area": "25.00",
+    "volume": "50.00",
+    "location": "",
+    "description": "",
+    "created_at": "2025-07-06 11:26:38"
+  },
+  {
+    "id": "2",
+    "pond_code": "POND0002",
+    "pond_name": "Ao 002",
+    "area": "900.00",
+    "volume": "1200.00",
+    "location": "Tân Thành",
+    "description": "",
+    "created_at": "2025-07-06 11:18:08"
+  },
+  {
+    "id": "1",
+    "pond_code": "ao001",
+    "pond_name": "Ao khu vực 1",
+    "area": "1000.00",
+    "volume": "1000.00",
+    "location": "Bạc liêu",
+    "description": "",
+    "created_at": "2025-07-06 11:17:48"
+  }
+]
