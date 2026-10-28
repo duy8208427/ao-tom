@@ -14,6 +14,7 @@ type Props = {
   selectedFarmId: string | null;
   selectedVehicleId: string | null;
   selectedPlantId: string | null;
+  farmSceneId?: string | null;
   onHover: (info: HoverInfo | null, immediate?: boolean) => void;
   onSelect: (pondId: string) => void;
   onSelectFarm: (farmId: string) => void;
@@ -24,13 +25,14 @@ type Props = {
 
 const WATER = "#0c4a6e";
 const FOCUS_PITCH = 36;
-/** Từ mức zoom này trở lên, ao trong trại mới hiện ra; dưới đó chỉ thấy thẻ trại. */
-const PEN_ZOOM = 14;
+/** Từ mức zoom này trở lên, ao trong trại mới hiện ra; dưới đó chỉ thấy thẻ trại. Ao sát nhau nên phải nhìn gần. */
+const PEN_ZOOM = 17;
 /** Cùng bề rộng với ScaleControl. Dưới 50 km trên thước thì nhãn hiện như khi thước ghi khoảng 30 km. */
 const SCALE_BAR_PX = 88;
 const DETAIL_SCALE_M = 50_000;
-/** Mức zoom khi bay vào một trại hoặc ao: các ao cách nhau vài trăm mét đủ giãn để thẻ không đè nhau. */
+/** Mức zoom khi bay vào một ao lẻ. Ao trong trại nằm sát nhau nên phải nhìn gần hơn. */
 const FOCUS_ZOOM = 15;
+const FARM_ZOOM = 18.2;
 
 const PEN_ICON =
   '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 13c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 18c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></svg>';
@@ -191,7 +193,7 @@ function settleLabels(root: HTMLElement) {
 
 function focusPadding(side: boolean) {
   return side
-    ? { top: 90, left: 40, right: 380, bottom: 80 }
+    ? { top: 90, left: 40, right: 362, bottom: 80 }
     : { top: 90, left: 40, right: 40, bottom: 80 };
 }
 
@@ -435,6 +437,7 @@ export function PondMap({
   onSelectVehicle,
   onSelectPlant,
   onBackground,
+  farmSceneId = null,
 }: Props) {
   const [mapReady, setMapReady] = useState(false);
   const [streetMain, setStreetMain] = useState(false);
@@ -459,6 +462,7 @@ export function PondMap({
   const plantRef = useRef(onSelectPlant);
   const backgroundRef = useRef(onBackground);
   const layersRef = useRef(layers);
+  const sceneCamera = useRef<{ center: [number, number]; zoom: number; pitch: number; bearing: number } | null>(null);
   const settleRef = useRef<() => void>(() => {});
   pinsRef.current = pins;
   farmsRef.current = farms;
@@ -498,7 +502,7 @@ export function PondMap({
       zoom: 5.3,
       pitch: 32,
       bearing: -12,
-      maxPitch: 55,
+      maxPitch: 60,
       attributionControl: false,
     });
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-left");
@@ -933,10 +937,18 @@ export function PondMap({
     if (!map || !mapReady) return;
     const side = Boolean(selectedId || selectedFarmId || selectedVehicleId || selectedPlantId);
     const padding = focusPadding(side);
+    const pitch = farmSceneId ? 54 : FOCUS_PITCH;
     if (selectedId) {
       const selected = pinsRef.current.find((pin) => pin.pond.id === selectedId);
       if (selected) {
-        map.flyTo({ center: [selected.lng, selected.lat], zoom: FOCUS_ZOOM, pitch: FOCUS_PITCH, speed: 1.05, padding });
+        const clustered = Boolean(selected.farm_id) && selected.farm_id !== UNASSIGNED_FARM_ID;
+        map.flyTo({
+          center: [selected.lng, selected.lat],
+          zoom: clustered || farmSceneId ? FARM_ZOOM : FOCUS_ZOOM,
+          pitch,
+          speed: 1.05,
+          padding,
+        });
       }
       return;
     }
@@ -953,11 +965,43 @@ export function PondMap({
       if (plant) map.flyTo({ center: [plant.longitude, plant.latitude], zoom: 10.8, pitch: FOCUS_PITCH, speed: 1.05, padding });
       return;
     }
-    if (selectedFarmId) {
+    if (selectedFarmId && !farmSceneId) {
       const farm = farmsRef.current.find((item) => item.id === selectedFarmId && item.id !== UNASSIGNED_FARM_ID);
       if (farm) map.flyTo({ center: [farm.longitude, farm.latitude], zoom: FOCUS_ZOOM, pitch: FOCUS_PITCH, speed: 1.05, padding });
     }
-  }, [mapReady, selectedId, selectedFarmId, selectedVehicleId, selectedPlantId]);
+  }, [mapReady, selectedId, selectedFarmId, selectedVehicleId, selectedPlantId, farmSceneId]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady) return;
+    if (!farmSceneId) {
+      const saved = sceneCamera.current;
+      if (!saved) return;
+      sceneCamera.current = null;
+      map.flyTo({ center: saved.center, zoom: saved.zoom, pitch: saved.pitch, bearing: saved.bearing, speed: 1.05 });
+      return;
+    }
+    if (!sceneCamera.current) {
+      const center = map.getCenter();
+      sceneCamera.current = {
+        center: [center.lng, center.lat],
+        zoom: map.getZoom(),
+        pitch: map.getPitch(),
+        bearing: map.getBearing(),
+      };
+    }
+    if (selectedId) return;
+    const bounds = new maplibregl.LngLatBounds();
+    for (const pin of pinsRef.current) bounds.extend([pin.lng, pin.lat]);
+    if (bounds.isEmpty()) return;
+    map.fitBounds(bounds, {
+      padding: { top: 150, bottom: 90, left: 70, right: 70 },
+      pitch: 54,
+      bearing: -28,
+      maxZoom: 18.6,
+      duration: 1300,
+    });
+  }, [mapReady, farmSceneId, selectedId]);
 
   const sideOpen = Boolean(selectedId || selectedFarmId || selectedVehicleId || selectedPlantId);
 
