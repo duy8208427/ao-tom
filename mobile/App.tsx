@@ -1,72 +1,96 @@
-import { useState } from "react";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "expo-status-bar";
-import { HomeScreen } from "./src/HomeScreen";
-import { LoginScreen } from "./src/LoginScreen";
-import { PondScreen } from "./src/PondScreen";
-import type { Pond, Role } from "./src/data";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import type { RootStack } from "./src/nav";
+import { AccountScreen } from "./src/screens/AccountScreen";
+import { LoginScreen } from "./src/screens/LoginScreen";
+import { PondDetailScreen } from "./src/screens/PondDetailScreen";
+import { PondsScreen } from "./src/screens/PondsScreen";
+import { WarningsScreen } from "./src/screens/WarningsScreen";
+import { StoreProvider, useStore } from "./src/store";
+import { C } from "./src/theme";
 
-type Session = { role: Role; account: string | null };
+const Stack = createNativeStackNavigator<RootStack>();
+const Tab = createBottomTabNavigator();
 
-const LOGIN_URL = "https://iot.clb4u.com/users/login/index.html";
+const theme = {
+  ...DefaultTheme,
+  colors: { ...DefaultTheme.colors, primary: C.brand, background: C.bg, card: C.card, text: C.text, border: C.line },
+};
 
-async function loginAccount(username: string, password: string): Promise<void> {
-  if (!username || !password) throw new Error("Nhập username và mật khẩu.");
-  const body = new URLSearchParams({ username, password });
-  let html = "";
-  try {
-    const response = await fetch(LOGIN_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: body.toString(),
-    });
-    html = await response.text();
-  } catch {
-    throw new Error("Không kết nối được máy chủ. Có thể xem dữ liệu đã lưu.");
-  }
-  const ok = /Xin chào/i.test(html) && !/name="password"/i.test(html);
-  if (!ok) throw new Error("Đăng nhập không thành công. Kiểm tra tài khoản hoặc dùng dữ liệu đã lưu.");
+function Tabs() {
+  const { warnings } = useStore();
+  const high = warnings.filter((w) => w.level === "HIGH").length;
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        headerTitleStyle: { fontWeight: "800" },
+        tabBarActiveTintColor: C.brand,
+        tabBarInactiveTintColor: C.muted,
+        tabBarLabelStyle: { fontWeight: "700" },
+      }}
+    >
+      <Tab.Screen
+        name="Ponds"
+        component={PondsScreen}
+        options={{
+          title: "Ao tôm",
+          tabBarLabel: "Ao",
+          tabBarIcon: ({ color, size }) => <Ionicons name="water-outline" color={color} size={size} />,
+        }}
+      />
+      <Tab.Screen
+        name="Warnings"
+        component={WarningsScreen}
+        options={{
+          title: "Cảnh báo",
+          tabBarBadge: high ? high : undefined,
+          tabBarBadgeStyle: { backgroundColor: C.high },
+          tabBarIcon: ({ color, size }) => <Ionicons name="warning-outline" color={color} size={size} />,
+        }}
+      />
+      <Tab.Screen
+        name="Account"
+        component={AccountScreen}
+        options={{
+          title: "Tài khoản",
+          tabBarIcon: ({ color, size }) => <Ionicons name="person-circle-outline" color={color} size={size} />,
+        }}
+      />
+    </Tab.Navigator>
+  );
 }
 
-export default function App() {
-  const [session, setSession] = useState<Session | null>(null);
-  const [pond, setPond] = useState<Pond | null>(null);
-
+function Root() {
+  const { session } = useStore();
   if (!session) {
     return (
       <>
         <StatusBar style="light" />
-        <LoginScreen
-          onLogin={async (username, password, role) => {
-            await loginAccount(username, password);
-            setSession({ role, account: username });
-          }}
-          onSaved={(role) => setSession({ role, account: null })}
-        />
+        <LoginScreen />
       </>
     );
   }
-
-  if (pond) {
-    return (
-      <>
-        <StatusBar style="dark" />
-        <PondScreen pond={pond} onBack={() => setPond(null)} />
-      </>
-    );
-  }
-
   return (
-    <>
+    <NavigationContainer theme={theme}>
       <StatusBar style="dark" />
-      <HomeScreen
-        role={session.role}
-        account={session.account}
-        onOpenPond={setPond}
-        onLogout={() => {
-          setPond(null);
-          setSession(null);
-        }}
-      />
-    </>
+      <Stack.Navigator screenOptions={{ headerTitleStyle: { fontWeight: "800" }, headerTintColor: C.brand, headerBackTitle: "Quay lại" }}>
+        <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }} />
+        <Stack.Screen name="Pond" component={PondDetailScreen} options={({ route }) => ({ title: route.params.title })} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <StoreProvider>
+        <Root />
+      </StoreProvider>
+    </SafeAreaProvider>
   );
 }

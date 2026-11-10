@@ -2,16 +2,26 @@
   "expo": {
     "name": "Ao tôm",
     "slug": "ao-tom",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f2419"
+    },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.visualsense.aotom"
+      "bundleIdentifier": "com.visualsense.aotom",
+      "buildNumber": "2",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "com.visualsense.aotom",
+      "versionCode": 2,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",

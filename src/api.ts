@@ -61,7 +61,12 @@ export function sampleTasks(): TaskRow[] {
   return regionCatalog().tasks;
 }
 
-const BASE = "/pctomca";
+let BASE = "/pctomca";
+
+/** Bản mobile gọi thẳng máy chủ PCTomCa thay vì qua proxy /pctomca của web. */
+export function setApiBase(base: string): void {
+  BASE = base.replace(/\/$/, "");
+}
 
 function num(value: unknown): number | null {
   if (value === null || value === undefined || value === "" || value === "-") return null;
@@ -79,7 +84,7 @@ export async function login(username: string, password: string): Promise<boolean
     method: "POST",
     credentials: "include",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body,
+    body: body.toString(),
     redirect: "follow",
   });
   const html = await res.text();
@@ -186,7 +191,7 @@ export async function submitPasswordForm(
     method: "POST",
     credentials: "include",
     headers: FORM_HEADERS,
-    body,
+    body: body.toString(),
     redirect: "follow",
   });
   const html = await res.text();
