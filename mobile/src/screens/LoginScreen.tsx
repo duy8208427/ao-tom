@@ -45,7 +45,7 @@ export function LoginScreen() {
         <Text style={st.sub}>Visual Sense Group · giám sát ao nuôi</Text>
 
         <View style={st.card}>
-          <Text style={st.label}>Tài khoản PCTomCa</Text>
+          <Text style={st.label}>Tài khoản VSG Aqua</Text>
           <TextInput
             value={username}
             onChangeText={setUsername}

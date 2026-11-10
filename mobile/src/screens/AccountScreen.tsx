@@ -13,7 +13,7 @@ export function AccountScreen() {
   const rows: [string, string][] = [
     ["Tài khoản", session.account ?? "Không đăng nhập"],
     ["Vai trò", ROLE_LABEL[session.role]],
-    ["Nguồn dữ liệu", session.live ? "Trực tiếp từ PCTomCa" : "Dữ liệu đã lưu trong app"],
+    ["Nguồn dữ liệu", session.live ? "Trực tiếp từ VSG Aqua" : "Dữ liệu đã lưu trong app"],
     ["Số ao", String(pins.length)],
     ["Cập nhật lúc", clock(updatedAt)],
   ];
@@ -30,11 +30,11 @@ export function AccountScreen() {
       </Card>
 
       <Button label={refreshing ? "Đang làm mới…" : "Làm mới dữ liệu"} kind="ghost" disabled={refreshing} onPress={() => void refresh()} />
-      <Button label="Mở PCTomCa trên web" kind="ghost" onPress={() => void Linking.openURL(SERVER)} />
+      <Button label="Mở VSG Aqua trên web" kind="ghost" onPress={() => void Linking.openURL(SERVER)} />
       <Button label={session.account ? "Đăng xuất" : "Đăng nhập tài khoản"} onPress={signOut} />
 
       <Text style={st.foot}>
-        Ao tôm {appJson.expo.version} · Đổi mật khẩu và quản lý thiết bị thực hiện trên web PCTomCa.
+        Ao tôm {appJson.expo.version} · Đổi mật khẩu và quản lý thiết bị thực hiện trên web VSG Aqua.
       </Text>
     </ScrollView>
   );

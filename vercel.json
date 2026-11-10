@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/pctomca", "destination": "/api/pctomca" },
-    { "source": "/pctomca/:path*", "destination": "/api/pctomca/:path*" }
+    { "source": "/vsgaqua", "destination": "/api/vsgaqua" },
+    { "source": "/vsgaqua/:path*", "destination": "/api/vsgaqua/:path*" }
   ]
 }

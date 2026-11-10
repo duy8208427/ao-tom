@@ -1,4 +1,4 @@
-// Bộ đọc bảng HTML tối giản cho các trang PCTomCa (React Native không có DOMParser).
+// Bộ đọc bảng HTML tối giản cho các trang VSG Aqua (React Native không có DOMParser).
 
 const ENTITIES: Record<string, string> = {
   amp: "&",

@@ -10,11 +10,11 @@ function rewriteCookies(cookies: string[]): string[] {
   );
 }
 
-export const pctomcaProxy: ProxyOptions = {
+export const vsgAquaProxy: ProxyOptions = {
   target: "https://iot.clb4u.com",
   changeOrigin: true,
   secure: true,
-  rewrite: (path) => path.replace(/^\/pctomca/, ""),
+  rewrite: (path) => path.replace(/^\/vsgaqua/, ""),
   cookieDomainRewrite: "",
   configure(proxy) {
     proxy.on("proxyRes", (proxyRes) => {

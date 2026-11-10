@@ -4,6 +4,7 @@ import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 export type RootStack = {
   Tabs: undefined;
   Pond: { pondId: string; title: string };
+  Vehicle: { vehicleId: string; title: string };
 };
 
 export function useRootNav() {

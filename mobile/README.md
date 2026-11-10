@@ -8,13 +8,15 @@ App Expo / React Native dùng chung logic với bản web (`../src/api.ts`, `../
 | --- | --- |
 | **Ao** | Đếm ao Nguy hiểm / Cảnh báo / Ổn (bấm để lọc), tìm kiếm, danh sách ao xếp theo mức nguy hiểm kèm DO, pH, nhiệt độ. |
 | Chi tiết ao | Ảnh camera và trạng thái mất hình, 4 chỉ số chính (DO, pH, nhiệt độ, độ mặn) theo ngưỡng, tất cả chỉ số, biểu đồ lịch sử 1/7/30 ngày, cảnh báo, vận hành (thiết bị, vụ nuôi, cho ăn và thay nước trong tuần), công việc. |
-| **Cảnh báo** | Cảnh báo của ao, thiết bị và xe (xe chỉ hiện với Admin); bấm để mở ao. |
-| **Tài khoản** | Tài khoản, vai trò, nguồn dữ liệu, làm mới, mở PCTomCa trên web, đăng xuất. |
+| **Cảnh báo** | Cảnh báo của ao, thiết bị và xe chở tôm (xe chỉ hiện với Admin). Bấm cảnh báo ao hoặc thiết bị để mở ao; bấm cảnh báo xe để mở thông tin xe. |
+| Thông tin xe | Biển số, trạng thái chuyến, tiến độ, tài xế, ao lấy tôm, nhà máy nhận, khối lượng, nhiệt thùng so với yêu cầu, giờ xuất phát và dự kiến tới, nút gọi nhà máy. |
+| **Tài khoản** | Tài khoản, vai trò, nguồn dữ liệu, làm mới, mở VSG Aqua trên web, đăng xuất. |
 
-- **Đăng nhập** bằng tài khoản PCTomCa (`https://iot.clb4u.com`), gọi thẳng máy chủ, không qua proxy. Cookie phiên do hệ điều hành giữ.
+- **Đăng nhập** bằng tài khoản VSG Aqua (`https://iot.clb4u.com`), gọi thẳng máy chủ, không qua proxy. Cookie phiên do hệ điều hành giữ.
 - **Xem dữ liệu đã lưu** chạy không cần mạng.
 - Số đo tự làm mới mỗi 15 giây khi app đang mở; kéo xuống để nạp lại toàn bộ.
-- **Không có trên mobile:** bản đồ 3D, panel xe/chuyến/nhà máy, đổi mật khẩu. Những phần này dùng trên web.
+- Tab đang chọn có nền xanh nhạt sau icon.
+- **Không có trên mobile:** bản đồ 3D, bảng điều phối chuyến và nhà máy, đổi mật khẩu. Những phần này dùng trên web.
 
 ## Chạy thử
 

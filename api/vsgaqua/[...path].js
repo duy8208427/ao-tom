@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     const lower = key.toLowerCase();
     if (lower === "set-cookie" || SKIP_RES.has(lower)) return;
     if (lower === "location") {
-      res.setHeader("location", value.replace(/https?:\/\/iot\.clb4u\.com/gi, "/pctomca"));
+      res.setHeader("location", value.replace(/https?:\/\/iot\.clb4u\.com/gi, "/vsgaqua"));
       return;
     }
     res.setHeader(key, value);

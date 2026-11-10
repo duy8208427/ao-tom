@@ -1,6 +1,6 @@
 # Nguồn dữ liệu bản đồ 3D ao tôm
 
-Nguồn: [PCTomCa](https://iot.clb4u.com/) (tài khoản admin đã xem ngày 19/10/2026) và video giao diện Enfarm (`d:\New folder\Enfarm.mp4`).
+Nguồn: [VSG Aqua](https://iot.clb4u.com/) (tài khoản admin đã xem ngày 19/10/2026) và video giao diện Enfarm (`d:\New folder\Enfarm.mp4`).
 
 ## Giao diện Enfarm cần bắt chước
 
@@ -10,7 +10,7 @@ Nguồn: [PCTomCa](https://iot.clb4u.com/) (tài khoản admin đã xem ngày 19
 - Click: bảng phải với đồng hồ đo (vùng xanh an toàn / đỏ ngoài ngưỡng) và biểu đồ lịch sử theo mốc thời gian.
 - Mini-map góc phải dưới, nút zoom / la bàn / lớp bản đồ.
 
-## Menu PCTomCa liên quan ao tôm
+## Menu VSG Aqua liên quan ao tôm
 
 - Dashboard: `https://iot.clb4u.com/users/dashboard/index.html` và `https://iot.clb4u.com/default/index/index.html`
 - Realtime: `/iot/realtime_dashboard/index.html`

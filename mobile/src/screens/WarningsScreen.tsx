@@ -9,7 +9,7 @@ import { Empty } from "../ui";
 const KIND_TITLE: Record<WarningKind, string> = { pond: "Ao", asset: "Thiết bị", trip: "Xe chở tôm" };
 
 export function WarningsScreen() {
-  const { warnings, pins, refreshing, refresh } = useStore();
+  const { warnings, pins, vehicles, refreshing, refresh } = useStore();
   const nav = useRootNav();
   const sections = useMemo(
     () =>
@@ -19,9 +19,14 @@ export function WarningsScreen() {
     [warnings],
   );
 
-  const open = (item: WarningItem) => {
+  /** Cảnh báo xe mở thông tin xe; cảnh báo ao và thiết bị mở ao. */
+  const target = (item: WarningItem): (() => void) | null => {
+    if (item.kind === "trip") {
+      const vehicle = vehicles.find((v) => v.id === item.vehicle_id);
+      return vehicle ? () => nav.navigate("Vehicle", { vehicleId: vehicle.id, title: vehicle.plate }) : null;
+    }
     const pin = item.pond_id ? pins.find((p) => p.pond.id === item.pond_id) : undefined;
-    if (pin) nav.navigate("Pond", { pondId: pin.pond.id, title: pin.pond.pond_name });
+    return pin ? () => nav.navigate("Pond", { pondId: pin.pond.id, title: pin.pond.pond_name }) : null;
   };
 
   return (
@@ -40,10 +45,11 @@ export function WarningsScreen() {
       )}
       renderItem={({ item }) => {
         const tone = statusColor(item.level);
-        const canOpen = Boolean(item.pond_id && pins.some((p) => p.pond.id === item.pond_id));
+        const open = target(item);
+        const canOpen = Boolean(open);
         return (
           <Pressable
-            onPress={() => open(item)}
+            onPress={() => open?.()}
             disabled={!canOpen}
             style={({ pressed }) => [st.row, pressed && { opacity: 0.7 }]}
             accessibilityRole={canOpen ? "button" : undefined}

@@ -61,9 +61,9 @@ export function sampleTasks(): TaskRow[] {
   return regionCatalog().tasks;
 }
 
-let BASE = "/pctomca";
+let BASE = "/vsgaqua";
 
-/** Bản mobile gọi thẳng máy chủ PCTomCa thay vì qua proxy /pctomca của web. */
+/** Bản mobile gọi thẳng máy chủ VSG Aqua thay vì qua proxy /vsgaqua của web. */
 export function setApiBase(base: string): void {
   BASE = base.replace(/\/$/, "");
 }

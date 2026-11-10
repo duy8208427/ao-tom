@@ -1,4 +1,4 @@
-// Client PCTomCa cho mobile: dùng lại các hàm JSON của bản web (../../src/api.ts),
+// Client VSG Aqua cho mobile: dùng lại các hàm JSON của bản web (../../src/api.ts),
 // chỉ thay phần đọc trang HTML vì React Native không có DOMParser.
 import {
   fallbackAlerts,

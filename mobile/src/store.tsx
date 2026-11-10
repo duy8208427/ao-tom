@@ -4,7 +4,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { AppState } from "react-native";
 import { DEMO_FARM_ID, DEMO_RESIDENT, regionCatalog } from "../../src/catalog";
 import { buildPins, buildVehicleViews, buildWarnings } from "../../src/geo";
-import type { AlertRow, AppRole, Device, Measurement, Parameter, Pond, PondPin, TaskRow, WarningItem } from "../../src/types";
+import type { AlertRow, AppRole, Device, Measurement, Parameter, Plant, Pond, PondPin, TaskRow, VehicleView, WarningItem } from "../../src/types";
 import {
   SessionExpired,
   fallbackAlerts,
@@ -45,6 +45,8 @@ export type Prefs = { username: string; role: AppRole };
 type Store = {
   session: Session | null;
   pins: PondPin[];
+  vehicles: VehicleView[];
+  plants: Plant[];
   warnings: WarningItem[];
   parameters: Parameter[];
   alerts: AlertRow[];
@@ -221,19 +223,20 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     return all;
   }, [catalog, session, region]);
 
-  const warnings = useMemo(() => {
-    if (!session) return [];
-    const vehicles =
-      session.role === "admin"
-        ? buildVehicleViews(region.vehicles, region.trips, pins, region.plants, region.routes, updatedAt ?? Date.now())
-        : [];
-    return buildWarnings(pins, vehicles);
+  /** Xe chở tôm chỉ dành cho Admin, giống bản web. */
+  const vehicles = useMemo(() => {
+    if (session?.role !== "admin") return [];
+    return buildVehicleViews(region.vehicles, region.trips, pins, region.plants, region.routes, updatedAt ?? Date.now());
   }, [pins, session, region, updatedAt]);
+
+  const warnings = useMemo(() => (session ? buildWarnings(pins, vehicles) : []), [pins, vehicles, session]);
 
   const value = useMemo<Store>(
     () => ({
       session,
       pins,
+      vehicles,
+      plants: region.plants,
       warnings,
       parameters: catalog?.parameters ?? [],
       alerts: catalog?.alerts ?? [],
@@ -247,7 +250,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       refresh,
       signOut,
     }),
-    [session, pins, warnings, catalog, updatedAt, refreshing, notice, prefs, signIn, openSaved, refresh, signOut],
+    [session, pins, vehicles, region, warnings, catalog, updatedAt, refreshing, notice, prefs, signIn, openSaved, refresh, signOut],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
